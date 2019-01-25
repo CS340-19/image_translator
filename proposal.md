@@ -1,13 +1,11 @@
-# Digital Scribe
-## Script Squad
-### Team Members: Andy Liu, Yucheng Ma, Yiming Sun, Dakota Williams
-
+# Image Translator
+## *Team Name*
+### Team Members: Andy Liu, Yucheng Ma, Yiming Sun Dakota Williams, 
 
 ### 1: Intro
-##### Our idea is to create a computer application that will recognize words in a picture, from many different alphabets and translate it to english and other languages.
-
 ### 2: Customer Value
 ### 3: Proposed Solution & Technology
+##### <p> We try to use Google vision API to detect the text from image, and the google translation API to translate the name.</p> 
 ### 4: Team
 ### 5: Project Management
 
