@@ -5,7 +5,7 @@
 ### 1: Intro
 ### 2: Customer Value
 ### 3: Proposed Solution & Technology
-  ##### <p> We try to use Google vision API to detect the text from image, and the google translation API to translate the name.</p> 
+  ##### <p> We try to use Google vision API to detect the text from image, and the google translation API to translate the text.</p> 
 ### 4: Team
 ### 5: Project Management
 
