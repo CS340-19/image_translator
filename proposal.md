@@ -3,7 +3,7 @@
 ### Team Members: Andy Liu, Yucheng Ma, Yiming Sun, Dakota Williams 
 
 ### 1: Intro
-<p>Our idea is to create a computer application that will recognize words ina picture, from many different alphabets, and translate it to english and other languages. We hope that this will make it easier for tourists and students to communicate and take notes.</p>
+<p>Our idea is to create a computer application that will recognize words in a picture, from many different alphabets, and translate it to english and other languages. We hope that this will make it easier for tourists and students to communicate and take notes. Sometime professors talk/write to fast, and the only option left for these student is to take pictures. This is where our program will come in. With our program, students can easily translate their pictures they take in classes, and translate it to languages they are comfortable with  </p>
 
 ##### What existing software does it resemble? How is it different?
 ##### Team member backgrounds:
