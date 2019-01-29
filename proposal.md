@@ -12,9 +12,7 @@
 
 
 ### 3: Proposed Solution & Technology
-#### <p>We try to use Google vision API to detect the text from image, and the google translation API to translate the text.</p>
-##### Future improvements?
-##### How do we test?
+<p> For this program, we are going to use python.We will rely on Google cloud platform and use their API. For now, we have choose to use Google vision API to detect the text from image, and the google translation API to translate the text. We have not determined way to build GUI, we will decide it later. </p>
 
 ### 4: Team
 #### <p>Nobody on the team has developed anything like this before, so we hope to use this as a learning experience to better our development skills. None of us have used the Google APIs before.</p>
