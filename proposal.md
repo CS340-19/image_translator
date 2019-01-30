@@ -1,6 +1,5 @@
 # Image Translator
-## *Team Name*
-### Team Members: Andy Liu(team manager), Yucheng Ma, Yiming Sun, Dakota Williams 
+## Team Members: Andy Liu(team manager), Yucheng Ma, Yiming Sun, Dakota Williams 
 
 ### 1: Intro
 <p>   Our idea is to create a computer application that will recognize words in a picture, from many different alphabets, and translate it to English or other languages. We hope that this will make it easier for tourists and students to communicate and take notes. Sometimes professors talk/write too fast, and the only option left for these students is to take pictures. This is where our program will come in. With our program, students can easily translate their pictures they take in classes and explain it to languages they are comfortable in. Also, for tourists, when people go to foreign countries, it is hard to go anywhere. You will not be able to communicate with others (unless they know English or you know other languages) or understand their written language. It might be easy to translate language such as Spanish where you can type the word into your mobile translator. However, for a language such as Chinese or Japanese, there no way foreigners will know how to type the word into the translator. Our program can help with that. Just take a picture and have those foreign words translated for you. </p>
