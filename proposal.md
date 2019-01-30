@@ -20,9 +20,9 @@
 ### 5: Project Management
 #### Schedule:
 <p>We will meet every weeks and discuss milestone and help each other with issues. First we will try to do some researches about image recognition. Afterward, we will do some researches regarding how to use google API in our code. This will probably take a week or two. The code will be split among us and we will split the works after doing our researches. Then we will spend time test image recognition. This probably going to take awhile since we never done it before. Then we going incorporates google API, and work the translation. Lastly, we will do some testing and debugging.</p>
-#### Constraints:
+
 
 #### Resources: 
 https://cloud.google.com/vision/docs/ 
 https://cloud.google.com/translate/docs/
-#### Descoping
+
