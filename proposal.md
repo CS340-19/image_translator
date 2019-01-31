@@ -28,6 +28,7 @@ Currently working for Network Services at OIT. I have written many python script
 Ma，Yucheng：
 
 Sun，Yiming：
+Familiar with C and C++,but don't have experience of developing python program.
 
 
 
@@ -52,6 +53,6 @@ Sun，Yiming：
 
 
 #### Resources: 
-https://cloud.google.com/vision/docs/ 
+https://cloud.google.com/vision/docs/ <br/> 
 https://cloud.google.com/translate/docs/
 
