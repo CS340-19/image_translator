@@ -16,6 +16,15 @@
 ### 4: Team
 <p>Nobody on the team has developed anything like this before, but Wiliiams have two years experience of using Python. Other teammates have learned C++ and C, but are intereseted in learning Python.None of us have used the Google APIs before. We hope to use this as a learning experience to better our development skills. </p>
 
+Liu，Andy：
+
+Williams，Dakota：
+
+Ma，Yucheng：
+
+Sun，Yiming：
+
+
 
 ### 5: Project Management
 #### Schedule:
