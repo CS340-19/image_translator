@@ -16,7 +16,7 @@
 
 ### 3: Proposed Solution & Technology
 <p> For this program, we are going to use python. Most of us have never used python before, but the reason we chose python is because the APIs that we are going to use fits well with python - and it's easy for us to learn. We will rely on the Google Cloud Platform and use their API. GCP is a cloud computing service that provides by google, it provides numerous APIs and has its own Software Development Kit.</p>
-<p> For now, we have choose to use Google vision for the OCR part of our application, it is an API that can analyze image and extract the text from said image.</p>
+<p> Optical character recognition (also optical character reader, OCR) is the mechanical or electronic conversion of images of typed, handwritten or printed text into machine-encoded text, whether from a scanned document, a photo of a document, a scene-photo (for example the text on signs and billboards in a landscape photo) or from subtitle text superimposed on an image (for example from a television broadcast). For now, we have choose to use Google vision for the OCR part of our application.</p>
 <p> Another API we will use is the cloud translation. This API can translate the text that we extract from image to other languages, it can also auto detect the language of the input texts.</p>
 <p> We have not determined the way to build GUI, we will figure it out later. So for the start, we have to be fimilar with python and Google cloud platform. We need to learn the way of using Google vision and test if it works. After our program can accuratly detect the text from image, we will move to the translation part. The main working process is pretty straight forward. You can use this program to open the file with .jpg and . png. Then the API will detect the text from the image. You can choose the language you want translate to, and the translation API will handle it. </p>
 
@@ -31,6 +31,7 @@ Proficient in Python, C++, SQL, and web basics. Back-End developer.
 Currently working for Network Services at OIT. I have written many python scripts that the network administrators can use.
 
 Ma，Yucheng：
+Familiar with C++ and C. Interested in phython but do not have experiende with it. Like teamwork project. 
 
 Sun，Yiming：
 Familiar with C and C++,but don't have experience of developing python program.
