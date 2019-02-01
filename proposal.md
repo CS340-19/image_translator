@@ -17,21 +17,23 @@
 ### 3: Proposed Solution & Technology
 <p> For this program, we are going to use python. Most of us have never used python before, but the reason we chose python is because the APIs that we are going to use fits well with python - and it's easy for us to learn. We will rely on the Google Cloud Platform and use their API. GCP is a cloud computing service that provides by google, it provides numerous APIs and has its own Software Development Kit.</p>
 <p> Optical character recognition (also optical character reader, OCR) is the mechanical or electronic conversion of images of typed, handwritten or printed text into machine-encoded text, whether from a scanned document, a photo of a document, a scene-photo (for example the text on signs and billboards in a landscape photo) or from subtitle text superimposed on an image (for example from a television broadcast). For now, we have choose to use Google vision for the OCR part of our application.</p>
-<p> Another API we will use is the cloud translation. This API can translate the text that we extract from image to other languages, it can also auto detect the language of the input texts.</p>
-<p> We have not determined the way to build GUI, we will figure it out later. So for the start, we have to be fimilar with python and Google cloud platform. We need to learn the way of using Google vision and test if it works. After our program can accuratly detect the text from image, we will move to the translation part. The main working process is pretty straight forward. You can use this program to open the file with .jpg and . png. Then the API will detect the text from the image. You can choose the language you want translate to, and the translation API will handle it. </p>
+<p> We will try using the build in GUI framework that comes with python, TkInter. We feel that it will have the best documented code, and the most examples since it is the de-facto standard. One of the other reasons is that it can produce applications that can run on Windows, Mac OSX, and even Linux. There are plenty of tutorials that should help us get what we want out of our GUI.</p>
+<p> Another API we will use is the cloud translation. This API can translate the text that we extract from image to other languages, it can also auto detect the language of the input texts. We chose this because of its speed, accuracy, and usability. Since none of us have any machine learning experience, instead of spending a lot of time trying to get that expertise this API does most of the machine learning on its own. </p>
+ 
+<p> So for the start, we have to be fimilar with python and Google cloud platform. We need to learn the way of using Google vision and test if it works. After our program can accuratly detect the text from image, we will move to the translation part. The main working process is pretty straight forward. You can use this program to open the file with .jpg and . png. Then the API will detect the text from the image. You can choose the language you want translate to, and the translation API will handle it. </p>
 
 ### 4: Team
 <p>Nobody on the team has developed anything like this before, but Wiliiams have two years experience of using Python. Other teammates have learned C++ and C, but are interested in learning Python.None of us have used the Google APIs before. We hope to use this as a learning experience to better our development skills. </p>
 
 Liu，Andy：
-Familiar with C and C++, but have no expericence with phython
+Familiar with C and C++, but have no expericence with python
 
 Williams，Dakota：
-Proficient in Python, C++, SQL, and web basics. Back-End developer.
+Proficient in Python, SQL, and web basics. Familiar with c++. Back-End developer. 
 Currently working for Network Services at OIT. I have written many python scripts that the network administrators can use.
 
 Ma，Yucheng：
-Familiar with C++ and C. Interested in phython but do not have experiende with it. Like teamwork project. 
+Familiar with C++ and C. Interested in python but do not have experiende with it. Like teamwork project. 
 
 Sun，Yiming：
 Familiar with C and C++,but don't have experience of developing python program.
