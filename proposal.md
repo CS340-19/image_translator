@@ -24,6 +24,7 @@
 <p>Nobody on the team has developed anything like this before, but Wiliiams have two years experience of using Python. Other teammates have learned C++ and C, but are interested in learning Python.None of us have used the Google APIs before. We hope to use this as a learning experience to better our development skills. </p>
 
 Liu，Andy：
+Familiar with C and C++, but have no expericence with phython
 
 Williams，Dakota：
 Proficient in Python, C++, SQL, and web basics. Back-End developer.
