@@ -21,7 +21,7 @@
 <p> Another API we will use is the cloud translation. This API can translate the text that we extract from image to other languages, it can also auto detect the language of the input texts. We chose this because of its speed, accuracy, and usability. Since none of us have any machine learning experience, instead of spending a lot of time trying to get that expertise this API does most of the machine learning on its own. </p>
  
 <p> So for the start, we have to be fimilar with python and Google cloud platform. We need to learn the way of using Google vision and test if it works. After our program can accuratly detect the text from image, we will move to the translation part. The main working process is pretty straight forward. You can use this program to open the file with .jpg and . png. Then the API will detect the text from the image. You can choose the language you want translate to, and the translation API will handle it. </p>
-!flowchart(https://github.com/CS340-19/image_translator/blob/master/CS340.png)
+![](CS340.png)
 
 ### 4: Team
 <p>Nobody on the team has developed anything like this before, but Wiliiams have two years experience of using Python. Other teammates have learned C++ and C, but are interested in learning Python.None of us have used the Google APIs before. We hope to use this as a learning experience to better our development skills. </p>
