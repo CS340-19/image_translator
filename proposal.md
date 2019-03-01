@@ -44,20 +44,6 @@ Familiar with C and C++,but don't have experience of developing python program.
 
 ### 5: Project Management
 #### Schedule:
-  **Time Line:**
-  
-  | Date Issued | Date for Completion | Task |
-  | :---: | :---: | --- |
-  | 2/4/19 | 2/18/19 | Create a base platform that we can upload images to. |
-  | 2/18/19 | 2/25/19 | Bug fixing initial build |
-  | 2/25/19 | 3/4/19 | Merge our OCR and base application |
-  | 3/4/19 | 3/11/19 | See what kind of improvements we can make |
-  | 3/11/19 | 3/18/19 | Get application ready for translator |
-  | 3/18/19 | 3/25/19 | Tie in translator to our application |
-  | 3/25/19 | 4/1/19 | Beta Tests and brainstorming for new ideas. |
-  | 4/1/19 | 4/8/19 | Bug fixes and major improvements |
-  | 4/8/19 | 4/15/19 | Final bug testing and minor improvements |
-  | 4/15/19 | 4/22/19 | Project Completion |
   
 <p>We will meet every weeks and discuss milestone and help each other with issues. First we will try to do some researches about image recognition. Afterward, we will do some researches regarding how to use google API in our code. This will probably take a week or two. The code will be split among us and we will split the works after doing our researches. Then we will spend time test image recognition. This probably going to take awhile since we never done it before. Then we going incorporates google API, and work the translation. Lastly, we will do some testing and debugging.</p>
 
