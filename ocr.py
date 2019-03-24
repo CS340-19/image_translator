@@ -1,11 +1,30 @@
 import sys
 import os
 import io
+import json
 from google.cloud import vision
 from google.cloud.vision import types
+from google.cloud import translate
+from google.cloud import vision
+def translation(texts):
+
+    # Instantiates a client
+    translate_client = translate.Client()
+
+    # The text to translate
+    json_data = json.dumps(texts)
+    # The target language
+    target = 'zh-CN'
+
+    # Translates some text into Russian
+    translation = translate_client.translate(
+        json_data,
+        target_language=target)
+
+    print(u'Translation: {}'.format(translation['translatedText']))
+
 def detect_text(path):
     """Detects text in the file."""
-    from google.cloud import vision
     client = vision.ImageAnnotatorClient()
 
     with io.open(path, 'rb') as image_file:
@@ -15,15 +34,11 @@ def detect_text(path):
 
     response = client.text_detection(image=image)
     texts = response.text_annotations
-    print('Texts:')
-
+    string = '' 
     for text in texts:
-        print('\n"{}"'.format(text.description))
-
-        vertices = (['({},{})'.format(vertex.x, vertex.y)
-                    for vertex in text.bounding_poly.vertices])
-
-        print('bounds: {}'.format(','.join(vertices)))
+        buf = text.description
+        string = string + ' '+buf
+    translation(string)
 
 path = os.path.join(os.path.dirname(__file__),sys.argv[1])
 
