@@ -1,6 +1,38 @@
 import sys
 import os
+import io
+import json
+from google.cloud import vision
+from google.cloud import translate
+from google.cloud.vision import types
 from PyQt4 import QtGui, QtCore
+
+credential_path = '/home/dwill148/cs340/image_translator/cs340-86384d000595.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credential_path
+
+def translation(texts):
+    client = translate.Client()
+    data = json.dumps(texts)
+    target_ln = 'zh-CN'
+
+    translation = client.translate(data, target_language=target_ln)
+    print(u'Translation: {}'.format(translation['translatedText']))
+
+def detect_text(path):
+    client = vision.ImageAnnotatorClient()
+
+    with io.open(path, 'rb') as image:
+        content = image.read()
+
+    image = types.Image(content=content)
+
+    response = client.text_detection(image=image)
+    texts = response.text_annotations
+    string = ''
+    for text in texts:
+        string += text.description
+
+    translation(string)
 
 class TestListView(QtGui.QListWidget):
     def __init__(self, type, parent=None):
@@ -20,7 +52,7 @@ class TestListView(QtGui.QListWidget):
             event.accept()
         else:
             event.ignore()
-
+    
     def dropEvent(self, event):
         if event.mimeData().hasUrls:
             event.setDropAction(QtCore.Qt.CopyAction)
@@ -32,6 +64,23 @@ class TestListView(QtGui.QListWidget):
         else:
             event.ignore()
 
+
+class Example(QtGui.QWidget):
+    def __init__(self):
+        super(Example, self).__init__()
+        self.initUI()
+
+    def initUI(self):
+        QtGui.QToolTip.setFont(QtGui.QFont('SansSerif', 10))
+
+        btn = QtGui.QPushButton('Button', self)
+        btn.setToolTip('This is a button!')
+        btn.resize(50,50)
+        self.setGeometry(300, 300, 250, 150)
+        self.setWindowTitle('Text Upload')
+        self.show()
+
+
 class MainForm(QtGui.QMainWindow):
     def __init__(self, parent=None):
         super(MainForm, self).__init__(parent)
@@ -39,11 +88,13 @@ class MainForm(QtGui.QMainWindow):
         self.view = TestListView(self)
         self.connect(self.view, QtCore.SIGNAL("dropped"), self.pictureDropped)
         self.setCentralWidget(self.view)
+        self.setWindowTitle('Drag and Drop Window')
+        self.resize(450, 200)
 
     def pictureDropped(self, l):
         for url in l:
             if os.path.exists(url):
-                print(url)                
+                detect_text(url)
                 icon = QtGui.QIcon(url)
                 pixmap = icon.pixmap(72, 72)                
                 icon = QtGui.QIcon(pixmap)
@@ -53,8 +104,14 @@ class MainForm(QtGui.QMainWindow):
 
 def main():
     app = QtGui.QApplication(sys.argv)
+
+    # This is the main window that the entire app runs in
     form = MainForm()
     form.show()
+
+    # This is the widget that encompasses the drag and drop function.
+    widg = Example()
+
     app.exec_()
 
 if __name__ == '__main__':
