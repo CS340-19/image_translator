@@ -12,8 +12,8 @@ bg  Bulgarian
 ca  Catalan
 ce  Cebuano
 ny  Chichewa
-zh  Chinese (Simplified)
-zh  Chinese (Traditional)
+zh-CN  Chinese (Simplified)
+zh-TW  Chinese (Traditional)
 co  Corsican
 hr  Croatian
 cs  Czech
