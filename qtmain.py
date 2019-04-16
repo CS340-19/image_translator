@@ -18,7 +18,7 @@ def translation(texts):
     translation = client.translate(data, target_language=target_ln)
     #print(u'Translation: {}'.format(translation['translatedText']))
 
-    f_translation = translation['translatedText'].replace('\ n', '\n')
+    f_translation = translation['translatedText'].replace('\ n', '\n').replace('\ N', '\n')
     print("Translation:")
     print(f_translation)
 
@@ -78,15 +78,16 @@ class Selection(QtGui.QWidget):
         QtGui.QToolTip.setFont(QtGui.QFont('SansSerif', 10))
 
         language = QtGui.QComboBox(self)
-        """
         with open('languages.txt') as fin:
-            language.addItems(fin.readlines)
-        """
-        language.addItems(['English', 'Spanish', 'Chinese', 'Finnish'])
+            language.addItems([i.split()[1] for i in fin.readlines()])
 
         btn = QtGui.QPushButton('Upload', self)
         btn.resize(50,50)
         btn.move(200, 100)
+
+        if(btn.isFlat()):
+            print(language.currentText())
+
         self.setGeometry(300, 300, 250, 150)
         self.setWindowTitle('Text Upload')
         self.show()
