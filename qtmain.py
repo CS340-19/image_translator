@@ -16,7 +16,10 @@ def translation(texts):
     target_ln = 'zh-CN'
 
     translation = client.translate(data, target_language=target_ln)
-    print(u'Translation: {}'.format(translation['translatedText']))
+    #print(u'Translation: {}'.format(translation['translatedText']))
+
+    f_translation = translation['translatedText'].replace('\ n', '\n')
+    print(f_translation)
 
 def detect_text(path):
     client = vision.ImageAnnotatorClient()
@@ -65,17 +68,20 @@ class TestListView(QtGui.QListWidget):
             event.ignore()
 
 
-class Example(QtGui.QWidget):
+class Selection(QtGui.QWidget):
     def __init__(self):
-        super(Example, self).__init__()
+        super(Selection, self).__init__()
         self.initUI()
 
     def initUI(self):
         QtGui.QToolTip.setFont(QtGui.QFont('SansSerif', 10))
 
-        btn = QtGui.QPushButton('Button', self)
-        btn.setToolTip('This is a button!')
+        language = QtGui.QComboBox(self)
+        language.addItems(['English', 'Spanish', 'Chinese', 'Finnish'])
+
+        btn = QtGui.QPushButton('Upload', self)
         btn.resize(50,50)
+        btn.move(200, 100)
         self.setGeometry(300, 300, 250, 150)
         self.setWindowTitle('Text Upload')
         self.show()
@@ -110,7 +116,7 @@ def main():
     form.show()
 
     # This is the widget that encompasses the drag and drop function.
-    widg = Example()
+    widg = Selection()
 
     app.exec_()
 
