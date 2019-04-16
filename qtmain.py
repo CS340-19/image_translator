@@ -19,6 +19,7 @@ def translation(texts):
     #print(u'Translation: {}'.format(translation['translatedText']))
 
     f_translation = translation['translatedText'].replace('\ n', '\n')
+    print("Translation:")
     print(f_translation)
 
 def detect_text(path):
@@ -77,6 +78,10 @@ class Selection(QtGui.QWidget):
         QtGui.QToolTip.setFont(QtGui.QFont('SansSerif', 10))
 
         language = QtGui.QComboBox(self)
+        """
+        with open('languages.txt') as fin:
+            language.addItems(fin.readlines)
+        """
         language.addItems(['English', 'Spanish', 'Chinese', 'Finnish'])
 
         btn = QtGui.QPushButton('Upload', self)
