@@ -10,19 +10,20 @@ from PyQt4 import QtGui, QtCore
 credential_path = '/home/dwill148/cs340/image_translator/cs340-86384d000595.json'
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credential_path
 
-def translation(texts):
+def translation(texts, target_ln):
     client = translate.Client()
     data = json.dumps(texts)
-    target_ln = 'zh-CN'
+    data = data.replace('\\n', '\n').replace('"', '')
+    print('Detected Text:')
+    print(data)
 
     translation = client.translate(data, target_language=target_ln)
-    #print(u'Translation: {}'.format(translation['translatedText']))
-
     f_translation = translation['translatedText'].replace('\ n', '\n').replace('\ N', '\n')
     print("Translation:")
     print(f_translation)
+    print
 
-def detect_text(path):
+def detect_text(path, lang='Chinese(Simplified) zh-CN'):
     client = vision.ImageAnnotatorClient()
 
     with io.open(path, 'rb') as image:
@@ -35,8 +36,9 @@ def detect_text(path):
     string = ''
     for text in texts:
         string += text.description
+        break
 
-    translation(string)
+    translation(string, str(lang).split()[1])
 
 class TestListView(QtGui.QListWidget):
     def __init__(self, type, parent=None):
@@ -69,30 +71,6 @@ class TestListView(QtGui.QListWidget):
             event.ignore()
 
 
-class Selection(QtGui.QWidget):
-    def __init__(self):
-        super(Selection, self).__init__()
-        self.initUI()
-
-    def initUI(self):
-        QtGui.QToolTip.setFont(QtGui.QFont('SansSerif', 10))
-
-        language = QtGui.QComboBox(self)
-        with open('languages.txt') as fin:
-            language.addItems([i.split()[1] for i in fin.readlines()])
-
-        btn = QtGui.QPushButton('Upload', self)
-        btn.resize(50,50)
-        btn.move(200, 100)
-
-        if(btn.isFlat()):
-            print(language.currentText())
-
-        self.setGeometry(300, 300, 250, 150)
-        self.setWindowTitle('Text Upload')
-        self.show()
-
-
 class MainForm(QtGui.QMainWindow):
     def __init__(self, parent=None):
         super(MainForm, self).__init__(parent)
@@ -103,10 +81,19 @@ class MainForm(QtGui.QMainWindow):
         self.setWindowTitle('Drag and Drop Window')
         self.resize(450, 200)
 
+        self.language = QtGui.QComboBox(self)
+        with open('languages.txt') as fin:
+            self.language.addItems([i.split()[1] + ' ' + i.split()[0] for i in fin.readlines()])
+
+        btn = QtGui.QPushButton('Upload', self)
+        btn.resize(50,50)
+        btn.move(400, 150)
+
+
     def pictureDropped(self, l):
         for url in l:
             if os.path.exists(url):
-                detect_text(url)
+                detect_text(url, self.language.currentText())
                 icon = QtGui.QIcon(url)
                 pixmap = icon.pixmap(72, 72)                
                 icon = QtGui.QIcon(pixmap)
@@ -120,9 +107,6 @@ def main():
     # This is the main window that the entire app runs in
     form = MainForm()
     form.show()
-
-    # This is the widget that encompasses the drag and drop function.
-    widg = Selection()
 
     app.exec_()
 

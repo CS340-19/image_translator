@@ -12,8 +12,8 @@ bg  Bulgarian
 ca  Catalan
 ce  Cebuano
 ny  Chichewa
-zh-CN  Chinese (Simplified)
-zh-TW  Chinese (Traditional)
+zh-CN  Chinese(Simplified)
+zh-TW  Chinese(Traditional)
 co  Corsican
 hr  Croatian
 cs  Czech
@@ -49,7 +49,7 @@ kn  Kannada
 kk  Kazakh
 km  Khmer
 ko  Korean
-ku  Kurdish (Kurmanji)
+ku  Kurdish(Kurmanji)
 ky  Kyrgyz
 lo  Lao
 la  Latin
@@ -64,7 +64,7 @@ mt  Maltese
 mi  Maori
 mr  Marathi
 mn  Mongolian
-my  Myanmar (Burmese)
+my  Myanmar(Burmese)
 ne  Nepali
 no  Norwegian
 ps  Pashto
