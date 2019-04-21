@@ -79,16 +79,13 @@ class MainForm(QtGui.QMainWindow):
         self.connect(self.view, QtCore.SIGNAL("dropped"), self.pictureDropped)
         self.setCentralWidget(self.view)
         self.setWindowTitle('Drag and Drop Window')
-        self.resize(450, 200)
+        self.resize(800, 450)
 
         self.language = QtGui.QComboBox(self)
+        self.language.move(700, 0)
+
         with open('languages.txt') as fin:
             self.language.addItems([i.split()[1] + ' ' + i.split()[0] for i in fin.readlines()])
-
-        btn = QtGui.QPushButton('Upload', self)
-        btn.resize(50,50)
-        btn.move(400, 150)
-
 
     def pictureDropped(self, l):
         for url in l:
