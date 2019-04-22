@@ -5,9 +5,9 @@ import json
 from google.cloud import vision
 from google.cloud import translate
 from google.cloud.vision import types
-from PyQt4 import QtGui, QtCore
+from PyQt4 import QtGui, QtCore, Qt
 
-credential_path = '/home/dwill148/cs340/image_translator/cs340-86384d000595.json'
+credential_path = '/home/yiming/Downloads/CS340-39315c0b2250.json'
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credential_path
 
 def translation(texts, target_ln):
@@ -21,7 +21,6 @@ def translation(texts, target_ln):
     f_translation = translation['translatedText'].replace('\ n', '\n').replace('\ N', '\n')
     print("Translation:")
     print(f_translation)
-    print
 
 def detect_text(path, lang='Chinese(Simplified) zh-CN'):
     client = vision.ImageAnnotatorClient()
@@ -80,10 +79,16 @@ class MainForm(QtGui.QMainWindow):
         self.setCentralWidget(self.view)
         self.setWindowTitle('Drag and Drop Window')
         self.resize(600, 500)
-
+        
         self.language = QtGui.QComboBox(self)
         self.language.move(500, 0)
 
+        self.items = QtGui.QDockWidget("Result",self)
+        self.listWidget = QtGui.QListWidget()
+        self.listWidget.addItem("Translation:")
+        self.items.setWidget(self.listWidget)
+        #compile error
+        #self.addDockWidget(Qt.BottomDockWidgetArea,self.items)
         with open('languages.txt') as fin:
             self.language.addItems([i.split()[1] + ' ' + i.split()[0] for i in fin.readlines()])
 
