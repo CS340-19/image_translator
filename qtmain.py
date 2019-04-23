@@ -7,7 +7,7 @@ from google.cloud import translate
 from google.cloud.vision import types
 from PyQt4 import QtGui, QtCore, Qt
 
-credential_path = '/home/yiming/Downloads/CS340-39315c0b2250.json'
+credential_path = '/home/dwill148/cs340/image_translator/cs340-86384d000595.json'
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credential_path
 
 def translation(texts, target_ln):
@@ -21,6 +21,7 @@ def translation(texts, target_ln):
     f_translation = translation['translatedText'].replace('\ n', '\n').replace('\ N', '\n')
     print("Translation:")
     print(f_translation)
+    return f_translation
 
 def detect_text(path, lang='Chinese(Simplified) zh-CN'):
     client = vision.ImageAnnotatorClient()
@@ -37,7 +38,7 @@ def detect_text(path, lang='Chinese(Simplified) zh-CN'):
         string += text.description
         break
 
-    translation(string, str(lang).split()[1])
+    return(translation(string, str(lang).split()[1]))
 
 class TestListView(QtGui.QListWidget):
     def __init__(self, type, parent=None):
@@ -69,6 +70,8 @@ class TestListView(QtGui.QListWidget):
         else:
             event.ignore()
 
+def output(text, listWidget, counter):
+  listWidget.addItem(str(counter) + ': ' + text)
 
 class MainForm(QtGui.QMainWindow):
     def __init__(self, parent=None):
@@ -83,19 +86,25 @@ class MainForm(QtGui.QMainWindow):
         self.language = QtGui.QComboBox(self)
         self.language.move(500, 0)
 
-        self.items = QtGui.QDockWidget("Result",self)
         self.listWidget = QtGui.QListWidget()
         self.listWidget.addItem("Translation:")
+  
+        self.items = QtGui.QDockWidget("Result",self)
         self.items.setWidget(self.listWidget)
+        self.counter = 0
+
         #compile error
         #self.addDockWidget(Qt.BottomDockWidgetArea,self.items)
+
         with open('languages.txt') as fin:
             self.language.addItems([i.split()[1] + ' ' + i.split()[0] for i in fin.readlines()])
 
     def pictureDropped(self, l):
         for url in l:
+            self.counter += 1
             if os.path.exists(url):
-                detect_text(url, self.language.currentText())
+                translation = detect_text(url, self.language.currentText())
+                output(translation, self.listWidget, self.counter)
                 icon = QtGui.QIcon(url)
                 pixmap = icon.pixmap(72, 72)                
                 icon = QtGui.QIcon(pixmap)
