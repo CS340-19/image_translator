@@ -5,6 +5,7 @@
 <p>   Our idea is to create a computer application that will recognize words in a picture, from many different alphabets, and translate it to English or other languages. Yucheng and Yiming are international students and they come from China. They can fluently communicate with everyone in English. But in the classroom, they are still struggling in many professional vocabulary. That's why we have this idea about our project.</p>
 <p> We hope that this will make it easier for tourists and students to communicate and take notes. Sometimes professors talk/write too fast, and the only option left for these students is to take pictures. This is where our program will come in. With our program, students can easily translate their pictures they take in classes and explain it to languages they are comfortable in. Also, for tourists, when people go to foreign countries, it is hard to go anywhere. You will not be able to communicate with others (unless they know English or you know other languages) or understand their written language.</p>
 <p> It might be easy to translate language such as Spanish where you can type the word into your mobile translator. However, for a language such as Chinese or Japanese, there no way foreigners will know how to type the word into the translator. Our program can help with that. Just take a picture and have those foreign words translated for you. </p>
+<p> Generally, our project is basically the same as described by proposal. we finished the basic functions we proposed. We done the ocr and trasnlation part, and the GUI is finished very well.</p>
  
 ### 2: Customer Value
 
@@ -21,6 +22,7 @@
 <p> Another API we will use is the cloud translation. This API can translate the text that we extract from image to other languages, it can also auto detect the language of the input texts. We chose this because of its speed, accuracy, and usability. Since none of us have any machine learning experience, instead of spending a lot of time trying to get that expertise this API does most of the machine learning on its own. </p>
  
 <p> So for the start, we have to be fimilar with python and Google cloud platform. We need to learn the way of using Google vision and test if it works. After our program can accuratly detect the text from image, we will move to the translation part. The main working process is pretty straight forward. You can use this program to open the file with .jpg and . png. Then the API will detect the text from the image. You can choose the language you want translate to, and the translation API will handle it. </p>
+<p> After we finished viable system, we were trying to make translation more accurate. We ran the test about upload a image and translate it to the different languages. We also tried different type of images, like the screenshots from articles, game posters, advertisement, and the photo of handwriting.This program can successfully identify well formatted pictures. However for some images, like advertisement and handwriting, it can have identification error and returns wrong result.</p>
 
 ![flowchart](https://github.com/CS340-19/image_translator/blob/master/CS340.png)
 
@@ -39,6 +41,7 @@ Familiar with C++ and C. Interested in python but do not have experiende with it
 
 Sun，Yiming：
 Familiar with C and C++,but don't have experience of developing python program.
+Implement the basic functions of ocr and translation by using Python and GCP. Made a little help on GUI part and come up with some ideas and advices to the existng issue of project.
 
 
 
@@ -61,7 +64,8 @@ Familiar with C and C++,but don't have experience of developing python program.
   | 4/1/19 | 4/8/19 | Bug fixes and major improvements |
   | 4/8/19 | 4/15/19 | Final bug testing and minor improvements |
   | 4/15/19 | 4/22/19 | Project Completion |
-
+#### Conclution:
+<p>We spent a lot of time on building google environment which is out of the schedule. Becuase most of us don't have experience of using GCP, so we need time read documentation. Another part that out of schedule is building GUI, since none of us used Qt before, we spent some time to figure out the error we met. For example, we are trying to figure out put a output window on the mainwindow, somehow our plan is not working. We finally solve this issue by using widget, but it spent several days to come up this idea. </p>
 
 #### Resources: 
 https://cloud.google.com/vision/docs/ <br/> 
