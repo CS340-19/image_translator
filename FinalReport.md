@@ -64,8 +64,12 @@ Implement the basic functions of ocr and translation by using Python and GCP. Ma
   | 4/1/19 | 4/8/19 | Bug fixes and major improvements |
   | 4/8/19 | 4/15/19 | Final bug testing and minor improvements |
   | 4/15/19 | 4/22/19 | Project Completion |
-#### Conclusion:
-<p>We spent a lot of time on building google environment which is out of the schedule. Becuase most of us don't have experience of using GCP, so we need time read documentation. Another part that out of schedule is building GUI, since none of us used Qt before, we spent some time to figure out the error we met. For example, we are trying to figure out put a output window on the mainwindow, somehow our plan is not working. We finally solve this issue by using widget, but it spent several days to come up this idea. </p>
+
+#### Setback and Bugs:
+<p>We spent a lot of time on building google environment which is out of the schedule. Becuase most of us don't have experience of using GCP, so we need time read documentation. Another part that out of schedule is building GUI, since none of us used Qt before, we spent some time to figure out the error we met. For example, we are trying to figure out put a output window on the mainwindow, somehow our plan is not working. We finally solve this issue by using widget, but it spent several days to come up this idea. Also, our translation is not 100% accurate, but it is pretty close. We are hoping to make is more accurate. Our program do not create new line, so all the translation(words) are on a single line. There a bug with our UI we are hoping to fix. Other issue we ran into is that there will be weird symbol after our translation sometime. Lastly, our program cannot detect handwritten text so we hope to fix that too. </p>
+
+#### Reflection:
+<p>Overall, we think our program are working pretty well even with bugs. The program are functioning fine, and doing what it is suppose to do. We just need to fix the some miscellaneous stuff, and I think it will be perfect. </p>
 
 #### Resources: 
 https://cloud.google.com/vision/docs/ <br/> 
