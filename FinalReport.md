@@ -1,7 +1,7 @@
 # Image Translator
 ## Team Members: Andy Liu(team manager), Yucheng Ma, Yiming Sun, Dakota Williams 
 
-### 1: Intro
+### 1: Introduction
 <p>   Our idea is to create a computer application that will recognize words in a picture, from many different alphabets, and translate it to English or other languages. Yucheng and Yiming are international students and they come from China. They can fluently communicate with everyone in English. But in the classroom, they are still struggling in many professional vocabulary. That's why we have this idea about our project.</p>
 <p> We hope that this will make it easier for tourists and students to communicate and take notes. Sometimes professors talk/write too fast, and the only option left for these students is to take pictures. This is where our program will come in. With our program, students can easily translate their pictures they take in classes and explain it to languages they are comfortable in. Also, for tourists, when people go to foreign countries, it is hard to go anywhere. You will not be able to communicate with others (unless they know English or you know other languages) or understand their written language.</p>
 <p> It might be easy to translate language such as Spanish where you can type the word into your mobile translator. However, for a language such as Chinese or Japanese, there no way foreigners will know how to type the word into the translator. Our program can help with that. Just take a picture and have those foreign words translated for you. </p>
@@ -64,7 +64,7 @@ Implement the basic functions of ocr and translation by using Python and GCP. Ma
   | 4/1/19 | 4/8/19 | Bug fixes and major improvements |
   | 4/8/19 | 4/15/19 | Final bug testing and minor improvements |
   | 4/15/19 | 4/22/19 | Project Completion |
-#### Conclution:
+#### Conclusion:
 <p>We spent a lot of time on building google environment which is out of the schedule. Becuase most of us don't have experience of using GCP, so we need time read documentation. Another part that out of schedule is building GUI, since none of us used Qt before, we spent some time to figure out the error we met. For example, we are trying to figure out put a output window on the mainwindow, somehow our plan is not working. We finally solve this issue by using widget, but it spent several days to come up this idea. </p>
 
 #### Resources: 
